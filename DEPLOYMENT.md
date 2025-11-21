@@ -78,9 +78,11 @@ Every time you push changes to the `main` branch:
 - Check that Source is set to "GitHub Actions"
 - Wait 2-3 minutes for DNS propagation
 
-### CSS/JS not loading
-- This is already fixed with `basePath: '/dbs'` configuration
-- If issues persist, clear browser cache
+### CSS/JS not loading (503 Errors)
+- **Cause:** GitHub Pages CDN propagation delay (common after renaming repositories)
+- **Solution:** **WAIT.** It can take 10 minutes to 24 hours for the cache to clear.
+- **Action:** Do NOT keep pushing new changes. Let the current deployment sit.
+- **Verify:** Check if `.nojekyll` exists in the `public` folder (it should).
 
 ## 📊 Deployment Status
 
