@@ -8,10 +8,12 @@ import { ProjectsSection } from '@/components/portfolio/ProjectsSection'
 import { InternshipsSection } from '@/components/portfolio/InternshipsSection'
 import { ContactSection } from '@/components/portfolio/ContactSection'
 import { Footer } from '@/components/portfolio/Footer'
+import { DataAnalyticsBackground } from '@/components/portfolio/DataAnalyticsBackground'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-[#290907]">
+    <div className="relative min-h-screen text-[#0F172A]">
+      <DataAnalyticsBackground />
       <Navigation />
       <HeroSection />
       <SkillsSection />

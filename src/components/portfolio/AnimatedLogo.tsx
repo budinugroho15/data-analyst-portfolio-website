@@ -56,7 +56,7 @@ export const AnimatedLogo = () => {
                         ease: "easeInOut",
                         layout: { duration: 0.3, ease: "easeInOut" }
                     } as any}
-                    className="overflow-hidden whitespace-nowrap text-2xl font-bold text-[#1F2A23] font-mono"
+                    className="overflow-hidden whitespace-nowrap text-2xl font-bold text-[#0F172A] font-mono"
                 >
                     ['
                 </motion.span>
@@ -74,7 +74,7 @@ export const AnimatedLogo = () => {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: -20, opacity: 0 }}
                             transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] } as any}
-                            className="text-2xl font-bold tracking-tight text-[#1F2A23] whitespace-nowrap block"
+                            className="text-2xl font-bold tracking-tight text-[#0F172A] whitespace-nowrap block"
                         >
                             {words[currentWordIndex]}
                         </motion.span>
@@ -93,7 +93,7 @@ export const AnimatedLogo = () => {
                         ease: "easeInOut",
                         layout: { duration: 0.3, ease: "easeInOut" }
                     } as any}
-                    className="overflow-hidden whitespace-nowrap text-2xl font-bold text-[#1F2A23] font-mono"
+                    className="overflow-hidden whitespace-nowrap text-2xl font-bold text-[#0F172A] font-mono"
                 >
                     ']
                 </motion.span>

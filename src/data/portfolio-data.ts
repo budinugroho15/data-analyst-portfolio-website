@@ -2,10 +2,10 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export const NAVIGATION_ITEMS = [
     { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Certificates', href: '#certificates' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Internships', href: '#internships' },
+    { name: 'Skill', href: '#skills' },
+    { name: 'Certificate', href: '#certificates' },
+    { name: 'Project', href: '#projects' },
+    { name: 'Experience', href: '#internships' },
     { name: 'Contact', href: '#contact' }
 ]
 
@@ -206,13 +206,13 @@ export const CONTACT_INFO = {
 
 export const getDropdownItems = (sectionName: string) => {
     switch (sectionName) {
-        case 'Projects':
+        case 'Project':
             return PROJECTS.map(p => ({ label: p.title, href: `#${p.id}` }))
-        case 'Certificates':
+        case 'Certificate':
             return CERTIFICATES.map(c => ({ label: c.title, href: `#${c.id}` }))
-        case 'Internships':
+        case 'Experience':
             return INTERNSHIPS.map(i => ({ label: i.title, href: `#${i.id}` }))
-        case 'Skills':
+        case 'Skill':
             return Object.keys(SKILLS).map(category => ({
                 label: category,
                 href: `#skills-${category.toLowerCase().replace(/\s+/g, '-')}`

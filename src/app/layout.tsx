@@ -17,24 +17,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Dwi Budi Setyonugroho | Data Analyst Portfolio",
+  description: "Entry-level Data Analyst specializing in transforming complex data into actionable insights. Expertise in Python, SQL, Excel, data visualization, and predictive modeling. IBM Data Analyst Professional Certificate holder.",
+  keywords: [
+    "Data Analyst",
+    "Data Analytics",
+    "Python",
+    "SQL",
+    "Excel",
+    "Data Visualization",
+    "Business Intelligence",
+    "IBM Certified",
+    "Dwi Budi Setyonugroho",
+    "Portfolio"
+  ],
+  authors: [{ name: "Dwi Budi Setyonugroho" }],
   icons: {
-    icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Dwi Budi Setyonugroho | Data Analyst Portfolio",
+    description: "Entry-level Data Analyst specializing in transforming complex data into actionable insights through Python, SQL, and advanced analytics.",
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "Dwi Budi Setyonugroho | Data Analyst",
+    description: "Data Analyst Portfolio - Python, SQL, Excel, Data Visualization & Business Intelligence",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

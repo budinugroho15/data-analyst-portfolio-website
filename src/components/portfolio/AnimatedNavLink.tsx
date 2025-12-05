@@ -15,7 +15,7 @@ interface AnimatedNavLinkProps {
 
 export const AnimatedNavLink = ({ href, text, className = '', onClick, dropdownItems, isActive = false }: AnimatedNavLinkProps) => {
     const [isHovered, setIsHovered] = useState(false)
-    const hoverColor = '#FF6B6B' // Red color matching Connect button
+    const hoverColor = '#EF4444' // Red accent color
     const letters = text.split('')
 
     const container = {
@@ -26,11 +26,11 @@ export const AnimatedNavLink = ({ href, text, className = '', onClick, dropdownI
     const child = {
         initial: {
             y: 0,
-            color: '#1F2A23',
+            color: '#0F172A',
         },
         hover: {
             y: 0,
-            color: '#1F2A23', // Keep same color on hover
+            color: '#0F172A', // Keep same color on hover
             transition: {
                 duration: 0,
                 ease: [0.42, 0, 0.58, 1]
@@ -41,19 +41,17 @@ export const AnimatedNavLink = ({ href, text, className = '', onClick, dropdownI
     const dropdownVariants = {
         hidden: {
             opacity: 0,
-            y: -5,
-            scale: 0.98,
+            y: -10,
             transition: {
-                duration: 0.15,
+                duration: 0.3,
                 ease: [0.42, 0, 1, 1]
             } as any
         },
         visible: {
             opacity: 1,
             y: 0,
-            scale: 1,
             transition: {
-                duration: 0.2,
+                duration: 0.3,
                 ease: [0, 0, 0.58, 1]
             } as any
         }
@@ -106,26 +104,31 @@ export const AnimatedNavLink = ({ href, text, className = '', onClick, dropdownI
             <AnimatePresence>
                 {isHovered && dropdownItems && dropdownItems.length > 0 && (
                     <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 10 }}
-                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        initial="hidden"
+                        animate="visible"
+                        exit="hidden"
+                        variants={dropdownVariants}
                         className="absolute top-full left-0 pt-2 w-56 z-[100]"
                     >
-                        <div className="bg-white/95 backdrop-blur-xl rounded-lg shadow-lg border border-[#E0E0E0]/50 overflow-hidden py-1">
+                        <div className="bg-white/95 backdrop-blur-xl shadow-lg border border-[#E2E8F0]/50 overflow-hidden py-1">
                             {dropdownItems.map((item, index) => (
-                                <motion.a
+                                <a
                                     key={index}
                                     href={item.href}
-                                    className="block px-4 py-2.5 text-sm font-medium text-[#1F2A23] hover:bg-[#5A6E58]/5 hover:text-[#5A6E58] transition-all duration-200"
-                                    whileTap={{ scale: 0.98 }}
+                                    className="flex items-center px-4 py-2.5 text-sm font-medium text-[#0F172A] hover:bg-[#EFEBE9]/30"
+                                    style={{
+                                        lineHeight: '1.5',
+                                        transform: 'translateZ(0)',
+                                        backfaceVisibility: 'hidden',
+                                        WebkitFontSmoothing: 'antialiased'
+                                    }}
                                     onClick={(e) => {
                                         if (onClick) onClick()
                                         // Smooth scroll handling could be added here if needed
                                     }}
                                 >
                                     {item.label}
-                                </motion.a>
+                                </a>
                             ))}
                         </div>
                     </motion.div>
